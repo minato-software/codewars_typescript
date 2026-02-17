@@ -1,10 +1,6 @@
-export const makeNegative = (num: number): number => {
-    if(num > 0) {
-        return (num - num - num);
-    } else if (num < 0) {
-        return num;
-    } else if (num == 0) {
-        return num;
-    }
-    return num;
-};
+export function past(h: number, m: number, s: number): number {
+    const msPerHour = h * 3600000;
+    const msPerMinute = m * 60000;
+    const msPerSecond = s * 1000;
+    return (msPerHour + msPerMinute + msPerSecond);
+}
