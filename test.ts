@@ -1,14 +1,20 @@
-// See https://www.chaijs.com for how to use Chai.
-import { assert } from "chai";
+import { evenOrOdd } from "./solution";
+import { assert    } from "chai";
 
-import { isValidWalk } from "./solution";
-
-// Add your tests here
-describe("example", function() {
-    it("test", function() {
-        assert.equal(isValidWalk(['n','s','n','s','n','s','n','s','n','s']), true);
-        assert.equal(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']), false);
-        assert.equal(isValidWalk(['w']), false);
-        assert.equal(isValidWalk(['n','n','n','s','n','s','n','s','n','s']), false);
+describe("Example tests", function() {
+    it("evenOrOdd(1) should return 'Odd'", function(){
+        assert.equal(evenOrOdd(1), "Odd");
+    });
+    it("evenOrOdd(2) should return 'Even'", function(){
+        assert.equal(evenOrOdd(2), "Even");
+    });
+    it("evenOrOdd(-1) should return 'Odd'", function(){
+        assert.equal(evenOrOdd(-1), "Odd");
+    });
+    it("evenOrOdd(-2) should return 'Even'", function(){
+        assert.equal(evenOrOdd(-2), "Even");
+    });
+    it("evenOrOdd(0) should return 'Even'", function(){
+        assert.equal(evenOrOdd(0), "Even");
     });
 });
