@@ -1,12 +1,9 @@
-import { assert } from "chai";
-import { past } from "./solution";
+import {zeroFuel} from "./solution";
+import {assert} from "chai";
 
-describe("Fixed Tests", () => {
-    it("Tests", () => {
-        assert.equal(past(0, 1, 1), 61000);
-        assert.equal(past(1, 1, 1), 3661000);
-        assert.equal(past(0, 0, 0), 0);
-        assert.equal(past(1, 0, 1), 3601000);
-        assert.equal(past(1, 0, 0), 3600000);
+describe("zeroFill", function() {
+    it("Sample Tests", function() {
+        assert.equal(zeroFuel(50, 25, 2), true);
+        assert.equal(zeroFuel(100, 50, 1), false);
     });
 });
