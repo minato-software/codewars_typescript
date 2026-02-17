@@ -1,4 +1,10 @@
-export function litres(time: number): number {
-    const liters_per_hour = .5;
-    return  Math.floor(liters_per_hour * time);
-}
+export const makeNegative = (num: number): number => {
+    if(num > 0) {
+        return (num - num - num);
+    } else if (num < 0) {
+        return num;
+    } else if (num == 0) {
+        return num;
+    }
+    return num;
+};
