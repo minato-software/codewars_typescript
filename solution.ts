@@ -1,6 +1,4 @@
-export function evenOrOdd(n:number):string {
-    if(n % 2 === 0) {
-        return "Even";
-    }
-        return "Odd";
+export function litres(time: number): number {
+    const liters_per_hour = .5;
+    return  Math.floor(liters_per_hour * time);
 }
