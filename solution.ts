@@ -1,7 +1,4 @@
-export const zeroFuel = (distance: number, mpg: number, fuelLeft: number): boolean => {
-    if (fuelLeft * mpg >= distance) {
-        return true;
-    } else {
-        return false;
-    }
-};
+export function solution(str: string): string {
+    const reversedText: string = str.split('').reverse().join('');
+    return reversedText; // reverse this!
+}

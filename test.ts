@@ -1,9 +1,12 @@
-import {zeroFuel} from "./solution";
+import solution = require('./solution');
+// import the type of assertion library you wish to use (Chai recommended)
 import {assert} from "chai";
 
-describe("zeroFill", function() {
-    it("Sample Tests", function() {
-        assert.equal(zeroFuel(50, 25, 2), true);
-        assert.equal(zeroFuel(100, 50, 1), false);
+describe("Sample Test Cases", function(){
+    it("Should return a string", function() {
+        assert.equal(solution.solution('world'), 'dlrow');
+        assert.equal(solution.solution('hello'), 'olleh');
+        assert.equal(solution.solution(''), '');
+        assert.equal(solution.solution('h'), 'h');
     });
 });
