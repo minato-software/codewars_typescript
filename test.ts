@@ -1,9 +1,12 @@
-import { getSum } from './solution';
-import { assert } from "chai";
+import solution = require('./solution');
+import {assert} from "chai";
 
-describe("getSum", function(){
-    it("Sample Tests", function() {
-        assert.strictEqual(getSum(0,-1),-1);
-        assert.strictEqual(getSum(0,1),1);
+describe("solution", function(){
+    it("Basic Tests", function(){
+        assert.equal(solution.positiveSum([1,2,3,4,5]),15);
+        assert.equal(solution.positiveSum([1,-2,3,4,5]),13);
+        assert.equal(solution.positiveSum([]),0);
+        assert.equal(solution.positiveSum([-1,-2,-3,-4,-5]),0);
+        assert.equal(solution.positiveSum([-1,2,3,4,-5]),9);
     });
 });

@@ -1,5 +1,5 @@
-export function getSum(a: number, b: number): number {
-    const min = Math.min(a, b);
-    const max = Math.max(a, b);
-    return((max - min + 1) * (min + max)) / 2;
+export function positiveSum(arr:number[]):number {
+    return arr.reduce((sum, n) => {
+        return n > 0 ? sum + n: sum;
+    }, 0);
 }
