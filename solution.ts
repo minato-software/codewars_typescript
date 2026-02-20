@@ -1,17 +1,5 @@
-export function dirReduc(arr: string[]): string[] {
-    const oppositeDirections: Record<string, string> = {
-        "NORTH": "SOUTH",
-        "SOUTH": "NORTH",
-        "EAST": "WEST",
-        "WEST": "EAST"
-    };
-    return arr.reduce((stack: string[], dir: string) => {
-        const lastDirection = stack[stack.length - 1];
-        if (lastDirection === oppositeDirections[dir.toUpperCase()]) {
-            stack.pop();
-        } else {
-            stack.push(dir);
-        }
-        return stack;
-    }, []);
+export function getSum(a: number, b: number): number {
+    const min = Math.min(a, b);
+    const max = Math.max(a, b);
+    return((max - min + 1) * (min + max)) / 2;
 }
