@@ -1,12 +1,10 @@
-import solution = require('./solution');
 import {assert} from "chai";
+import {digitalRoot} from './solution';
 
-describe("solution", function(){
-    it("Basic Tests", function(){
-        assert.equal(solution.positiveSum([1,2,3,4,5]),15);
-        assert.equal(solution.positiveSum([1,-2,3,4,5]),13);
-        assert.equal(solution.positiveSum([]),0);
-        assert.equal(solution.positiveSum([-1,-2,-3,-4,-5]),0);
-        assert.equal(solution.positiveSum([-1,2,3,4,-5]),9);
+describe("solution", () => {
+    it('should work for fixed tests', () => {
+        assert.equal(digitalRoot(16), 7);
+        assert.equal(digitalRoot(456), 6 );
+        assert.equal(digitalRoot(426890740096), 1 );
     });
 });
